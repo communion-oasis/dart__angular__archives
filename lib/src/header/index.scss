@@ -1,0 +1,20 @@
+@import "../../../web/global/values";
+
+.logo-container
+{
+    text-align: center;
+
+    img
+    {
+        width: 200px;
+    }
+}
+
+.header
+{
+    text-align: center;
+    color: $colors-white-foreground;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    font-size: 28px;
+}
