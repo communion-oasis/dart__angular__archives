@@ -1,0 +1,10 @@
+<div class="frame">
+    <div class="titles">
+        <div *ngFor="let title of oasis.titles; let first = first" [class.first]="first">
+            {{ title }}
+        </div>
+    </div>    
+    <oasis-video [video]="oasis.part1"></oasis-video>
+    <oasis-video [video]="oasis.part2"></oasis-video>
+    <oasis-video [video]="oasis.whole"></oasis-video>
+</div>

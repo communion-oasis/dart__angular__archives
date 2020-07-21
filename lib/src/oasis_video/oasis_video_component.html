@@ -1,0 +1,7 @@
+<div class="frame">
+    <div class="title">{{ video.title }}</div>
+    <div class="link">
+        <a target="_blank" href="https://youtu.be/{{ video.id }}">https://youtu.be/{{ video.id }}</a>
+    </div>
+    <input class="download" (click)="download()" type="button" value="Download" />
+</div>

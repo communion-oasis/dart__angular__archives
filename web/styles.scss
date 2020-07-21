@@ -11,13 +11,33 @@ body
     background-color: $colors-body-background;
 }
 
-body, input[text], button 
+a
 {
-    color: #888;
+    text-decoration: none;
+    color: $colors-links;
+}
+
+input[type="button"]
+{
+    outline:none;
+    border: 0px;
+    padding: 3px 10px;
+    font-size: $fontsizes-small;
+    color: $colors-dark-foreground;
+    border-radius: 5px;    
+    cursor: pointer;
+}
+
+input[type="button"]::-moz-focus-inner 
+{
+    border: 0;
 }
 
 /* everywhere else */
 * 
 {
     font-family: Arial, Helvetica, sans-serif;
+    font-size: $fontsizes-normal;
+    color: $colors-dark-foreground;    
+    line-height: $lineheights-normal;    
 }

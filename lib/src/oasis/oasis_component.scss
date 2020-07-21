@@ -1,0 +1,13 @@
+@import "../../../web/global/values";
+
+.frame
+{
+    background-color: $colors-light-foreground;
+    text-align: left;
+    padding: 20px;
+}
+
+.titles div.first
+{
+    font-weight: bold;
+}
