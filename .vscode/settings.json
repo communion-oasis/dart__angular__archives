@@ -7,6 +7,7 @@
     ".packages": true,
     "dev-bin": true,
     "analysis_options.yaml": true,
-    "LICENSE": true
+    "LICENSE": true,
+    "heroku": true
   }
 }

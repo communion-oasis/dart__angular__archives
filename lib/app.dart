@@ -1,7 +1,10 @@
 import 'package:angular/angular.dart';
-import 'package:archives/src/header/index.dart';
-import 'package:archives/src/oasis/oasis.dart';
-import 'package:archives/src/oasis/oasis_component.dart';
+import 'package:archives/src/components/oasis_accordion_item/oasis_accordion_item_component.dart';
+import 'package:archives__data/data.dart';
+import './src/components/accordion/accordion_component.dart';
+import './src/components/accordion_item/accordion_item_component.dart';
+import './src/components/header/index.dart';
+import './src/components/oasis/oasis_component.dart';
 
 @Component(
     selector: "my-app",
@@ -9,10 +12,14 @@ import 'package:archives/src/oasis/oasis_component.dart';
     styleUrls: ["app.css"],
     directives: [
         HeaderComponent,
-        OasisComponent
+        OasisComponent,
+        AccordionComponent,
+        AccordionItemComponent,
+        OasisAccordionItemComponent,
+        NgFor
     ]
 )
 class AppComponent 
 {
-    final oasis = Oasis(["Esprit Saint","Souffle Insaisissable de Dieu"],"c2pPiKDaI2Y","bqt-fsEDKAk","ID2oY4AI23M");
+    final data = archivesData;
 }

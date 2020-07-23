@@ -1,5 +1,5 @@
 import 'package:angular/angular.dart';
-import './oasis_video.dart';
+import 'package:archives__data/src/video.dart';
 
 @Component(
   selector: "oasis-video",
@@ -9,7 +9,5 @@ import './oasis_video.dart';
 class OasisVideoComponent
 {
     @Input()
-    OasisVideo video;
-
-    void download() => video.download();
+    Video video;
 }

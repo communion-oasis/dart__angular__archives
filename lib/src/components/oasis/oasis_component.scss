@@ -1,4 +1,4 @@
-@import "../../../web/global/values";
+@import "../../../../web/global/values";
 
 .frame
 {
@@ -10,4 +10,5 @@
 .titles div.first
 {
     font-weight: bold;
+    font-size: $fontsizes-larger-normal;
 }

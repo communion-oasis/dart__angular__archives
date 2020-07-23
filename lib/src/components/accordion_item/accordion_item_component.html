@@ -1,0 +1,17 @@
+<div class="frame" [class.first]="first">
+    <div class="title-bar no-selection" (click)="toggle()">
+        <ng-container *ngIf="opened">
+            <span class="title">{{ accordionItem.openedTitle.title }}</span>
+            <span class="subtitle">{{ accordionItem.openedTitle.subtitle }}</span>
+        </ng-container>
+        <ng-container *ngIf="!opened">
+            <span class="title">{{ accordionItem.closedTitle.title }}</span>
+            <span class="subtitle">{{ accordionItem.closedTitle.subtitle }}</span>
+        </ng-container>
+    </div>
+    <div class="body" [class.closed]="!opened" (transitionend)="transitionEnd()" #body>
+        <div #wrapper>
+            <ng-content></ng-content>
+        </div>
+    </div>    
+</div>

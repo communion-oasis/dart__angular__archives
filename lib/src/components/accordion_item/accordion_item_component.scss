@@ -1,0 +1,52 @@
+@import "../../../../web/global/values";
+
+$title-bar-height: 48px;
+$body-border-width: 6px;
+$title-bar-title-height: 16px;
+$title-bar-subtitle-height: $title-bar-title-height;
+
+.frame
+{
+    width: 100%;
+    border-radius: 5px;
+    overflow: hidden;
+    margin-top: 20px;
+}
+
+.frame.first
+{
+    margin-top: 0px;
+}
+
+.title-bar
+{
+    background-color: $colors-darker-light-foreground;
+    text-align: left;
+    height: $title-bar-height;    
+    padding-left: 12px;
+    cursor: pointer;        
+}
+
+.title-bar span
+{
+    line-height: $title-bar-height;
+}
+
+span.title
+{
+    font-weight: bold;    
+    font-size: $title-bar-title-height;
+}
+
+span.subtitle
+{
+    color: $colors-ligther-dark-foreground;
+    font-size: $title-bar-subtitle-height;
+    position: relative;
+    left: 4px;
+}
+
+.body
+{
+    transition: height 0.26s ease;
+}

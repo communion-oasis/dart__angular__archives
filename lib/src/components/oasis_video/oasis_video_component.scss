@@ -1,0 +1,19 @@
+@import "../../../../web/global/values";
+
+.frame
+{
+    margin-top: 15px;
+    position: relative;
+}
+
+.title
+{
+    color: $colors-darker-foreground;
+}
+
+.download
+{
+    position: absolute;
+    right: 0px;
+    top: 9px;
+}

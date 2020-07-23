@@ -36,8 +36,32 @@ input[type="button"]::-moz-focus-inner
 /* everywhere else */
 * 
 {
-    font-family: Arial, Helvetica, sans-serif;
+    font-family: Roboto-Regular, Arial, Helvetica, sans-serif;
     font-size: $fontsizes-normal;
     color: $colors-dark-foreground;    
     line-height: $lineheights-normal;    
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0.07);
+}
+
+.no-selection
+{
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;    
+}
+
+i.icon,i.inactive-icon
+{
+    color: #888888;
+    height: 38px; 
+    font-size: 38px;   
+    cursor: pointer;
+}
+
+i.icon:hover
+{
+    color: #9790fd;
 }
