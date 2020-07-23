@@ -4,5 +4,12 @@
 {
     color: $colors-darker-light-foreground;
     margin: 15px 0px;
-    // margin-bottom: 10px;
+    font-size: $fontsizes-normal;
+
+    span
+    {
+        color: $colors-darker-light-foreground;
+        font-size: $fontsizes-larger-normal;
+    }
 }
+
