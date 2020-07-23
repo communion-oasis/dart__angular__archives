@@ -1,3 +1,5 @@
+import 'dart:html';
+
 import 'package:angular/angular.dart';
 import 'package:archives/src/components/oasis_accordion_item/oasis_accordion_item_component.dart';
 import 'package:archives__data/data.dart';
@@ -22,4 +24,11 @@ import './src/components/oasis/oasis_component.dart';
 class AppComponent 
 {
     final data = archivesData;
+
+    String get separator
+    {
+        final dash = "─";
+        final length = (window.screen.width>=600)?15:8;
+        return List<String>.generate(length,(index) => dash).join();
+    }
 }

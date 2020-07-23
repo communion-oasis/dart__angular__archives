@@ -1,7 +1,7 @@
 <div>
     <div class="logo-container">
-        <div class="logo">
-            <img src="packages/archives/src/components/header/resources/logo.png" />
+        <div class="logo" [class.show]="showLogo">
+            <img (load)="showLogo = true" src="packages/archives/src/components/header/resources/logo.png" />
         </div>
     </div>
     <div class="header">

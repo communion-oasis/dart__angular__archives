@@ -7,4 +7,5 @@ import 'package:angular/angular.dart';
 )
 class HeaderComponent 
 {
+    bool showLogo = false;
 }

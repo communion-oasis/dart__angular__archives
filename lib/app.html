@@ -3,7 +3,7 @@
     <div style="max-width: 600px;display: inline-block; width: 100%">
         <accordion #parent>
             <ng-container *ngFor="let year of data.years.reversed.toList()">
-                <div class="year-separator">──────── &nbsp;<span>{{ year.year }}</span>&nbsp; ────────</div>
+                <div class="year-separator">{{ separator }} &nbsp;<span>{{ year.year }}</span>&nbsp; {{ separator }}</div>
                 <oasis-accordion-item  *ngFor="let month of year.months.reversed.toList(); let _index = index; let _first = first" [oasis]="month" [index]="_index" [parent]="parent" [first]="_first">
                 </oasis-accordion-item>
             </ng-container>

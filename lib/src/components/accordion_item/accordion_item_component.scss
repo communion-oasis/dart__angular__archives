@@ -1,6 +1,6 @@
 @import "../../../../web/global/values";
 
-$title-bar-height: 53px;
+$title-bar-height: 48px;
 $body-border-width: 6px;
 $title-bar-title-height: 16px;
 $title-bar-subtitle-height: $title-bar-title-height;
@@ -8,7 +8,7 @@ $title-bar-subtitle-height: $title-bar-title-height;
 .frame
 {
     width: 100%;
-    border-radius: 5px;
+    border-radius: 7px;
     overflow: hidden;
     margin-top: 20px;
 }
@@ -24,6 +24,7 @@ $title-bar-subtitle-height: $title-bar-title-height;
     text-align: left;
     height: $title-bar-height;    
     padding-left: 12px;
+    padding-top: 2px;
     cursor: pointer;        
 }
 
