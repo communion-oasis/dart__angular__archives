@@ -18,7 +18,7 @@ _processHelp "$@"
 YES=0
 _loadArgs "$@"
 
-REPO_ADDRESSES=( $(getRepoAddresses) )
+REPO_ADDRESSES=( $(getRepoAddresses ".dart.angular") )
 HAS_AT_LEAST_ONE_REPO_ADDRESS=0
 [[ "${#REPO_ADDRESSES[@]}" -gt 0 ]] && HAS_AT_LEAST_ONE_REPO_ADDRESS=1
 

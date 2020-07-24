@@ -19,15 +19,22 @@ function createRepo
 
 function getRepoAddresses
 {
+    local POSTFIX_FILTER="$1"
     local GITCONFIG_FILE_PATH=~/.gitconfig
     [[ ! -f "$GITCONFIG_FILE_PATH" ]] && return 0
     local CONTENT=$(cat "$GITCONFIG_FILE_PATH")
-    local pattern='\[[[:space:]]*url[[:space:]]+['"'"'"]?[^'"'"'"]*['"'"'"]?[[:space:]]*\][[:space:]]+insteadOf[[:space:]]*=[[:space:]]*([^:]*):(.*)'
+    local PATTERN='\[[[:space:]]*url[[:space:]]+['"'"'"]?[^'"'"'"]*['"'"'"]?[[:space:]]*\][[:space:]]+insteadOf[[:space:]]*=[[:space:]]*([^:]*):(.*)'
     local BREAK=0
     while [[ "$BREAK" == 0 ]]; do
-        if [[ "$CONTENT" =~ $pattern ]]; then
-            echo "${BASH_REMATCH[1]}"
+        if [[ "$CONTENT" =~ $PATTERN ]]; then
+            local MATCH="${BASH_REMATCH[1]}"
             CONTENT="${BASH_REMATCH[2]}"
+            if [[ ! -z "$POSTFIX_FILTER" ]]; then
+               local PATTERN2="^.+${POSTFIX_FILTER//\./\\\.}\$" 
+               [[ "$MATCH" =~ $PATTERN2 ]] && echo "$MATCH"
+            else
+                echo "$MATCH"
+            fi                        
         else
             BREAK=1
         fi
