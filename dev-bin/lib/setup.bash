@@ -11,8 +11,9 @@ USAGE
 
 OPTIONS
 
-  -y,--yes      automatically answer 'y' to all interactive confirmation messages.
-  -h,--help     show this help page.
+  -y,--yes          automatically answer 'y' to all interactive confirmation messages.
+  -a,--all-repos    do not filter the repo address menu.
+  -h,--help         show this help page.
 
 EOF
 
@@ -190,6 +191,10 @@ function _loadArgs
     
     extractFlag "-y" "--yes" "|" "${ARGS[@]}"
     YES="$EF_FLAG"
+    ARGS=( "${EF_REMAINING_ARGS[@]}" )
+
+    extractFlag "-a" "--all-repos" "|" "${ARGS[@]}"
+    ALL_REPOS="$EF_FLAG"
     ARGS=( "${EF_REMAINING_ARGS[@]}" )
 
     if [[ "${#ARGS[@]}" -gt 0 ]]; then
