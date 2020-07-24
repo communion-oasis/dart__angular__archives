@@ -25,7 +25,7 @@ function _isCustomizable
     [[ -f "$PUBSPEC_PATH" ]] && 
     [[ "$(cat "$PUBSPEC_PATH")" =~ \{\{name\}\}.*\{\{description\}\} ]] && 
     [[ -f "$WEB_MAIN_PATH" ]] && 
-    [[ "$(cat "$PUBSPEC_PATH")" =~ \{\{name\}\} ]] &&
+    [[ "$(cat "$WEB_MAIN_PATH")" =~ \{\{name\}\} ]] &&
     [[ -f "$TEST_APP_TEST_PATH" ]] && 
     [[ "$(cat "$TEST_APP_TEST_PATH")" =~ \{\{name\}\} ]] &&
     [[ -f "$WEB_INDEX_PATH" ]] && 
