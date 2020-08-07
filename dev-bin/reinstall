@@ -1,0 +1,15 @@
+#!/bin/bash
+
+CURRENT_SCRIPT_DIR_PATH="$(cd "$(dirname "${BASH_SOURCE[0]}")" >/dev/null 2>&1 && pwd)"
+PROJECT_DIR_PATH="$(cd "$CURRENT_SCRIPT_DIR_PATH/.." && pwd)"
+source "$CURRENT_SCRIPT_DIR_PATH/lib/commons.bash"
+cd "$PROJECT_DIR_PATH"
+
+FILE_PATHS=( "pubspec.lock" ".packages" )
+for FILE_PATH in "${FILE_PATHS[@]}"; do
+    [[ -f "$FILE_PATH" ]] && rm "$FILE_PATH"
+done
+
+printAndExecuteAction 1 "pub get" \
+    "pub get" \
+    pub get

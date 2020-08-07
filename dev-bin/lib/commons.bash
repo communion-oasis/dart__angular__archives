@@ -23,6 +23,21 @@ function printAction
     echo -e "${LIGHTBLUE}\$ ${ACTION}${NC}${TRAILING}"
 }
 
+function printAndExecuteAction
+{
+    local ECHO_REQUIRED=0
+    [[ "$1" == 1 ]] && ECHO_REQUIRED=1
+    local COMMAND_DISPLAY="$2"
+    local ERROR_DISPLAY="$3"
+    shift 3
+    printAction "$COMMAND_DISPLAY" 
+    "$@"
+    ERR="$?"
+    [[ "$ECHO_REQUIRED" == 1 ]] && echo ""
+    [[ "$ERR" != 0 ]] && echo "fatal: '$ERROR_DISPLAY' failed with exit code $ERR" && exit 1
+}
+
+
 function printInfo
 {
     local INFO="$1"

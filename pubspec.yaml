@@ -19,4 +19,4 @@ dev_dependencies:
   archives__data:
     git:
       url: oasis.communion.dart.angular:archives__data
-      ref: 2020.7.11
+      ref: 2020.8.8

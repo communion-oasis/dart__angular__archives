@@ -47,8 +47,8 @@ packages:
     dependency: "direct dev"
     description:
       path: "."
-      ref: "2020.7.11"
-      resolved-ref: "1abfbc6ecaeabe5d79dbf17a7c615b6fb4228a1e"
+      ref: "2020.8.8"
+      resolved-ref: "3606a47f838006127d6b4917d1b0ce224f6a2746"
       url: "oasis.communion.dart.angular:archives__data"
     source: git
     version: "2020.7.11"
@@ -219,7 +219,7 @@ packages:
       name: csslib
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "0.16.1"
+    version: "0.16.2"
   dart_style:
     dependency: transitive
     description:
@@ -597,7 +597,7 @@ packages:
       name: vm_service
       url: "https://pub.dartlang.org"
     source: hosted
-    version: "4.1.0"
+    version: "4.2.0"
   watcher:
     dependency: transitive
     description:
